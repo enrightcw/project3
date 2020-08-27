@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'; 
+import {BrowserRouter as Router, Route } from 'react-router-dom'; 
 import Container from '@material-ui/core/Container';
-import Navbar from '@material-ui/core/Navbar';
-import Nav from '@material-ui/core/Nav';
+// import Navbar from '@material-ui/core/Navbar';
+// import Nav from '@material-ui/core/Nav';
 import './App.css';
 
 import Footer from './components/Footer';

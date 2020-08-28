@@ -1,15 +1,27 @@
 import React from 'react';
 import {BrowserRouter as Router, Route } from 'react-router-dom'; 
 import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+
 // import Navbar from '@material-ui/core/Navbar';
 // import Nav from '@material-ui/core/Nav';
 import './App.css';
 
 import Footer from './components/Footer';
+import Jumbotron from './components/Jumbotron';
 import Home from './pages/Home';
 import Food from './pages/Food';
 import Entertainment from './pages/Entertainment';
 import Friends from './pages/Friends';
+
+// const styles = {
+//   stickToBottom: {
+//     width: '100%',
+//     position: 'fixed',
+//     bottom: 0,
+//   },
+// };
+
 class App extends React.Component {
 
 constructor(props) {
@@ -43,8 +55,14 @@ constructor(props) {
   render(){
     return (
       <Router>
-        <Container className="p-0" fluid={true}>
-
+        <Container className="p-0 container" fluid={true}>
+        <Box component="span" m={1} container
+          direction="column"
+          justify="flex-end"
+          alignItems="center">
+          <Jumbotron>
+            Grubble
+          </Jumbotron>
           {/* <Navbar className= "border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Grubble</Navbar.Brand>
 
@@ -59,13 +77,14 @@ constructor(props) {
               </Nav>
             </Navbar.Collapse>
           </Navbar> */}
-
+          
           <Route path="/" exact render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
           <Route path="/food" exact render={()=> <Food title={this.state.food.title} />} />
           <Route path="/entertainment" exact render={()=> <Entertainment title={this.state.entertainment.title}/>} />
           <Route path="/friends" exact render={()=> <Friends title={this.state.friends.title}/>} />
+          </Box>
+          <Footer position="fixed"/>
 
-          <Footer/>
         </Container>
       </Router>
       );

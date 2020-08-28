@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+body{
+  background-image: url('./assets/images/background1.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}

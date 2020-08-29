@@ -10,17 +10,10 @@ import './App.css';
 import Footer from './components/Footer';
 import Jumbotron from './components/Jumbotron';
 import Home from './pages/Home';
-import Food from './pages/Food';
-import Entertainment from './pages/Entertainment';
+import Quiz from './pages/Quiz';
+import Search from './pages/Search';
+import Results from './pages/Results';
 import Friends from './pages/Friends';
-
-// const styles = {
-//   stickToBottom: {
-//     width: '100%',
-//     position: 'fixed',
-//     bottom: 0,
-//   },
-// };
 
 class App extends React.Component {
 
@@ -30,8 +23,9 @@ constructor(props) {
       title: 'Grubble',
       headerLinks: [
         {title: 'Home', path: '/'},
-        {title: 'Food', path: '/food'},
-        {title: 'Entertainment', path: '/entertainment'},
+        {title: 'Quiz', path: '/quiz'},
+        {title: 'Search', path: '/search'},
+        {title: 'Results', path: '/results'},
         {title: 'Friends', path: '/friends'}
       ],
       home: {
@@ -63,27 +57,19 @@ constructor(props) {
           <Jumbotron>
             Grubble
           </Jumbotron>
-          {/* <Navbar className= "border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Grubble</Navbar.Brand>
-
-            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
-            <Navbar.Collapse id="navbar-toggle">
-              <Nav className="ml-auto">
-                <Link className="nav-link" to ="/">Home </Link>
-                <Link className="nav-link" to ="/food">Food</Link>
-                <Link className="nav-link" to ="/entertainment">Entertainment</Link>
-                <Link className="nav-link" to ="/friends">Friends</Link>
-
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar> */}
           
           <Route path="/" exact render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
-          <Route path="/food" exact render={()=> <Food title={this.state.food.title} />} />
-          <Route path="/entertainment" exact render={()=> <Entertainment title={this.state.entertainment.title}/>} />
+          <Route path="/search" exact render={()=> <Search title={this.state.search.title} />} />
+          <Route path="/results" exact render={()=> <Results title={this.state.results.title}/>} />
           <Route path="/friends" exact render={()=> <Friends title={this.state.friends.title}/>} />
+          <Route path="/quiz" exact render={()=> <Quiz title={this.state.quiz.title}/>} />
           </Box>
-          <Footer position="fixed"/>
+          <Footer />
+          {/* <Link className="nav-link" to ="/">Home </Link>
+          <Link className="nav-link" to ="/food">Food</Link>
+          <Link className="nav-link" to ="/entertainment">Entertainment</Link>
+          <Link className="nav-link" to ="/friends">Friends</Link> */}
+
 
         </Container>
       </Router>

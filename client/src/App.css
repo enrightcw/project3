@@ -45,7 +45,14 @@
 
 body{
   background-image: url('./assets/images/background1.jpeg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+
+.title {
+  font-size: 24px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

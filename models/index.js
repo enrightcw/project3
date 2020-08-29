@@ -1,4 +1,6 @@
-// // module.exports = {
-//     Note: require("./Note"),
-//     User: require("./User")
-//   };
+module.exports = {
+    Friends: require("./Friends"),
+    User: require("./User"),
+    Preferences: require("./Preferences"),
+    History: require("./History")
+  };

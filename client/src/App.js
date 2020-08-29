@@ -6,7 +6,6 @@ import Box from '@material-ui/core/Box';
 // import Navbar from '@material-ui/core/Navbar';
 // import Nav from '@material-ui/core/Nav';
 import './App.css';
-import axios from 'axios';
 
 import Footer from './components/Footer';
 import Jumbotron from './components/Jumbotron';
@@ -16,6 +15,18 @@ import Search from './pages/Search';
 import Results from './pages/Results';
 import Friends from './pages/Friends';
 
+<<<<<<< HEAD
+
+// const styles = {
+//   stickToBottom: {
+//     width: '100%',
+//     position: 'fixed',
+//     bottom: 0,
+//   },
+// };
+
+=======
+>>>>>>> master
 class App extends React.Component {
 
 constructor(props) {

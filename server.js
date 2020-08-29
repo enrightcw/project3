@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const tripAdvisorRoutes = require('./routes/api/tripAdvisor');
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 const db = require("./models");
@@ -70,10 +72,12 @@ app.post("/submit", ({ body }, res) => {
 //     });
 // });
 
+app.use('/tripAdvisor', tripAdvisorRoutes)
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 app.listen(PORT, function() {

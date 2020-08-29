@@ -6,6 +6,7 @@ import Box from '@material-ui/core/Box';
 // import Navbar from '@material-ui/core/Navbar';
 // import Nav from '@material-ui/core/Nav';
 import './App.css';
+import axios from 'axios';
 
 import Footer from './components/Footer';
 import Jumbotron from './components/Jumbotron';

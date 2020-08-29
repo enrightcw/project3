@@ -9,7 +9,13 @@ const UserSchema = new Schema({
     }, 
     password: {
         type: String
-    }
+    }, 
+    preferences: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Preferences"
+        }
+      ]
 });
 
 const User = mongoose.model("User", UserSchema);

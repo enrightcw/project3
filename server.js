@@ -52,7 +52,7 @@ app.get("/preferences", (req, res) => {
 
 app.post("/submit", ({ body }, res) => {
   db.Preferences.create(body)
-    .then(({ _id }) => db.User.findOneAndUpdate({}, { $push: { user: _id } }, { new: true }))
+    .then(({ _id }) => db.User.findOneAndUpdate({where id is === id}, { $push: {preferences: _id } }, { new: true }))
     .then(dbUser => {
       res.json(dbUser);
     })

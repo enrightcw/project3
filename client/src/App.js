@@ -2,10 +2,12 @@ import React from 'react';
 import {BrowserRouter as Router, Route } from 'react-router-dom'; 
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-
-// import Navbar from '@material-ui/core/Navbar';
-// import Nav from '@material-ui/core/Nav';
 import './App.css';
+<<<<<<< HEAD
+
+import axios from 'axios';
+=======
+>>>>>>> master
 
 import Footer from './components/Footer';
 import Jumbotron from './components/Jumbotron';
@@ -15,18 +17,6 @@ import Search from './pages/Search';
 import Results from './pages/Results';
 import Friends from './pages/Friends';
 
-<<<<<<< HEAD
-
-// const styles = {
-//   stickToBottom: {
-//     width: '100%',
-//     position: 'fixed',
-//     bottom: 0,
-//   },
-// };
-
-=======
->>>>>>> master
 class App extends React.Component {
 
 constructor(props) {
@@ -67,7 +57,7 @@ constructor(props) {
           justify="flex-end"
           alignItems="center">
           <Jumbotron>
-            Grubble
+            <h1 className="title">Grubble</h1>
           </Jumbotron>
           
           <Route path="/" exact render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
@@ -85,7 +75,7 @@ constructor(props) {
 
         </Container>
       </Router>
-      );
+    );
   }
  
 }

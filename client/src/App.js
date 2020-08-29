@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container';
 // import Navbar from '@material-ui/core/Navbar';
 // import Nav from '@material-ui/core/Nav';
 import './App.css';
+import axios from 'axios';
 
 import Footer from './components/Footer';
 import Home from './pages/Home';

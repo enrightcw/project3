@@ -8,15 +8,26 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 const useStyles = makeStyles({
   root: {
-    width: 300,
+    width: 500,
   },
+  footer: {
+      position: "fixed",
+      left: 0,
+      bottom: 0,
+      // width: "50%",
+      color: "white",
+      textAlign: "center !important",
+  }
 });
+
+
 
 export default function SimpleBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   return (
+    <footer className ={classes.footer}>
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
@@ -29,5 +40,6 @@ export default function SimpleBottomNavigation() {
       <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
       <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
     </BottomNavigation>
+    </footer>
   );
 }

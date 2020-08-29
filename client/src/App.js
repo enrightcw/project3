@@ -3,8 +3,11 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import './App.css';
+<<<<<<< HEAD
 
 import axios from 'axios';
+=======
+>>>>>>> master
 
 import Footer from './components/Footer';
 import Jumbotron from './components/Jumbotron';

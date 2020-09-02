@@ -6,6 +6,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HistoryIcon from '@material-ui/icons/History';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import ContactsIcon from '@material-ui/icons/Contacts';
+import HomeIcon from '@material-ui/icons/Home';
 
 
 const useStyles = makeStyles({
@@ -36,14 +37,11 @@ export default function SimpleBottomNavigation() {
         showLabels
         className={classes.root}
       >
+        <BottomNavigationAction component={Link} to='/' label="Home" icon={<HomeIcon />} />s    
         <BottomNavigationAction component={Link} to='/friends' label="Friends" icon={<ContactsIcon />} />
         <BottomNavigationAction component={Link} to='/history' label="History" icon={<HistoryIcon />} />
         <BottomNavigationAction component={Link} to='/profile' label="Profile" icon={<AccountBoxIcon />} />
       </BottomNavigation>
-          {/* <Link className="nav-link" to ="/">Home </Link>
-          <Link className="nav-link" to ="/">Food</Link>
-          <Link className="nav-link" to ="/entertainment">Entertainment</Link>
-          <Link className="nav-link" to ="/friends">Friends</Link> */}
    
     </footer>
   );

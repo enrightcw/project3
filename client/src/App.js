@@ -6,46 +6,16 @@ import './App.css';
 
 // import axios from 'axios';
 
-import Footer from './components/Footer';
 import Display from './pages/Display';
 
 
 class App extends React.Component {
 
-constructor(props) {
-  super(props);
-    this.state= {
-      title: 'Grubble',
-      headerLinks: [
-        {title: 'Home', path: '/'},
-        {title: 'Quiz', path: '/quiz'},
-        {title: 'Search', path: '/search'},
-        {title: 'Results', path: '/results'},
-        {title: 'Friends', path: '/friends'}
-      ],
-      home: {
-        title: 'Grubble', 
-        subTitle: 'Take the arguing out of going out',
-        text:'Checkout my progress'
-      },
-      food: {
-        title: 'Food', 
-      },
-      entertainment: {
-        title: 'Entertainment', 
-      },
-      friends: {
-        title: 'Find Your Friends', 
-      }
-    }
-  }
- 
-
   render(){
     return (
       <div>
         <Display />
-        <Footer />
+    
       </div>
     );
   }

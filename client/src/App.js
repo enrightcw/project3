@@ -9,6 +9,24 @@ import './App.css';
 import Footer from './components/Footer';
 import Display from './pages/Display';
 
+import GoogleBtn from './GoogleBtn';
+
+function App() {
+  return (
+    <div>
+      ...
+      <GoogleBtn/>
+    </div>
+  );
+}
+
+// const styles = {
+//   stickToBottom: {
+//     width: '100%',
+//     position: 'fixed',
+//     bottom: 0,
+//   },
+// };
 
 class App extends React.Component {
 

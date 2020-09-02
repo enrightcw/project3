@@ -55,7 +55,7 @@ constructor(props) {
   render(){
     return (
       <div>
-        <Display />
+        <Display/>
         <GoogleBtn/>
         <Footer />
       </div>

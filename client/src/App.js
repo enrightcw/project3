@@ -16,7 +16,7 @@ import Entertainment from './pages/Entertainment';
 import Friends from './pages/Friends';
 
 import GoogleBtn from './GoogleBtn';
-...
+
 function App() {
   return (
     <div>

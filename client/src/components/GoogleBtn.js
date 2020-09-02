@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
-
 const CLIENT_ID = '558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com';
-
 
 class GoogleBtn extends Component {
    constructor(props) {
     super(props);
-
+    
     this.state = {
       isLogined: false,
       accessToken: ''
     };
-
+    
     this.login = this.login.bind(this);
     this.handleLoginFailure = this.handleLoginFailure.bind(this);
     this.logout = this.logout.bind(this);
@@ -36,8 +34,9 @@ class GoogleBtn extends Component {
     }));
   }
 
+
   handleLoginFailure (response) {
-    alert('Failed to log in')
+    console.log('Failed to log in', response)
   }
 
   handleLogoutFailure (response) {
@@ -63,7 +62,7 @@ class GoogleBtn extends Component {
           responseType='code,token'
         />
       }
-      {/* { this.state.accessToken ? <h5>Your Access Token: <br/><br/> { this.state.accessToken }</h5> : null } */}
+      { this.state.accessToken ? <h5>Your Access Token: <br/><br/> { this.state.accessToken }</h5> : null }
 
     </div>
     )

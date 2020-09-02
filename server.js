@@ -51,6 +51,7 @@ app.get("/preferences", (req, res) => {
     });
 });
 
+
 app.post("/submit", ({ body }, res) => {
   db.Preferences.create(body)
   //userId needs to be called on the frontend
@@ -62,6 +63,7 @@ app.post("/submit", ({ body }, res) => {
       res.json(err);
     });
 });
+
 
 app.use('/tripAdvisor', tripAdvisorRoutes)
 

@@ -29,11 +29,11 @@ class Display extends Component {
           subTitle: 'Take the arguing out of going out',
           text:'Checkout my progress'
         },
-        food: {
-          title: 'Food', 
+        history: {
+          title: 'History', 
         },
-        entertainment: {
-          title: 'Entertainment', 
+        profile: {
+          title: 'Profile', 
         },
         friends: {
           title: 'Find Your Friends', 
@@ -52,12 +52,12 @@ class Display extends Component {
                     <Container className="p-0 container" fluid={true}>         
                         <Switch>
                             <Route exact path="/"  render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
+                            <Route exact path="/friends"  render={()=> <Friends title={this.state.friends.title}/>} />
+                            <Route exact path="/profile"  render={()=> <Profile title={this.state.profile.title}/>} />
+                            <Route exact path="/history"  render={()=> <History title={this.state.history.title}/>} />
                             <Route exact path="/search"  render={()=> <Search title={this.state.search.title} />} />
                             <Route exact path="/results"  render={()=> <Results title={this.state.results.title}/>} />
-                            <Route exact path="/profile"  render={()=> <Profile title={this.state.profile.title}/>} />
-                            <Route exact path="/friends"  component = {Friends} />
                             <Route exact path="/quiz"  render={()=> <Quiz title={this.state.quiz.title}/>} />
-                            <Route exact path="/history"  render={()=> <History title={this.state.history.title}/>} />
                         </Switch>
                     </Container>
                     <Footer />

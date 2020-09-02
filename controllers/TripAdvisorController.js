@@ -3,7 +3,7 @@ const url = "https://tripadvisor1.p.rapidapi.com";
 const headers = {
   "content-type": "application/json; charset=utf8",
   "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-  "x-rapidapi-key": "11260c9019msh8864ed8d947ccf6p17416cjsn70d177e334a6",
+  "x-rapidapi-key": process.env.REACT_APP_TRIPADVISOR_API_KEY,
 };
 
 /**

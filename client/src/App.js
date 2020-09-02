@@ -26,12 +26,7 @@ class App extends React.Component {
     return (
       <div>
         <Display />
-<<<<<<< HEAD
-    
-=======
         <GoogleBtn/>
-        <Footer />
->>>>>>> master
       </div>
     );
   }

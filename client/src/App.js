@@ -9,16 +9,9 @@ import './App.css';
 import Footer from './components/Footer';
 import Display from './pages/Display';
 
-import GoogleBtn from './GoogleBtn';
+import GoogleBtn from './components/GoogleBtn';
 
-function App() {
-  return (
-    <div>
-      ...
-      <GoogleBtn/>
-    </div>
-  );
-}
+
 
 // const styles = {
 //   stickToBottom: {
@@ -63,6 +56,7 @@ constructor(props) {
     return (
       <div>
         <Display />
+        <GoogleBtn/>
         <Footer />
       </div>
     );

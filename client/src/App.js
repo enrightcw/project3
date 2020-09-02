@@ -15,6 +15,17 @@ import Food from './pages/Food';
 import Entertainment from './pages/Entertainment';
 import Friends from './pages/Friends';
 
+import GoogleBtn from './GoogleBtn';
+...
+function App() {
+  return (
+    <div>
+      ...
+      <GoogleBtn/>
+    </div>
+  );
+}
+
 // const styles = {
 //   stickToBottom: {
 //     width: '100%',

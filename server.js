@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const db = require("./models");
 const mongoose = require("mongoose");
+const { userInfo } = require("os");
 
 
 // Serve up static assets (usually on heroku)
@@ -52,7 +53,8 @@ app.get("/preferences", (req, res) => {
 
 app.post("/submit", ({ body }, res) => {
   db.Preferences.create(body)
-    .then(({ _id }) => db.User.findOneAndUpdate({where id is === id}, { $push: {preferences: _id } }, { new: true }))
+  //userId needs to be called on the frontend
+    .then(({ _id }) => db.User.findOneAndUpdate({_id: body.userId}, { $push: {preferences: _id } }, { new: true }))
     .then(dbUser => {
       res.json(dbUser);
     })
@@ -60,17 +62,6 @@ app.post("/submit", ({ body }, res) => {
       res.json(err);
     });
 });
-
-// app.get("/populateduser", (req, res) => {
-//   db.User.find({})
-//     .populate("notes")
-//     .then(dbUser => {
-//       res.json(dbUser);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
 
 app.use('/tripAdvisor', tripAdvisorRoutes)
 

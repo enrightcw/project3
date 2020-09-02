@@ -8,6 +8,17 @@ import './App.css';
 
 import Display from './pages/Display';
 
+import GoogleBtn from './components/GoogleBtn';
+
+
+
+// const styles = {
+//   stickToBottom: {
+//     width: '100%',
+//     position: 'fixed',
+//     bottom: 0,
+//   },
+// };
 
 class App extends React.Component {
 
@@ -15,7 +26,12 @@ class App extends React.Component {
     return (
       <div>
         <Display />
+<<<<<<< HEAD
     
+=======
+        <GoogleBtn/>
+        <Footer />
+>>>>>>> master
       </div>
     );
   }

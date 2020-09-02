@@ -8,7 +8,7 @@ const responseGoogle = (response) => {
  
 ReactDOM.render(
   <GoogleLogin
-    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+    clientId="558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com"
     buttonText="Login"
     onSuccess={responseGoogle}
     onFailure={responseGoogle}
@@ -19,7 +19,7 @@ ReactDOM.render(
 
 //Stay logged in isSignedIn={true} attribute will call onSuccess callback on load to keep current user signed in
 <GoogleLogin
-  clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+  clientId="558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com"
   onSuccess={responseGoogle}
   isSignedIn={true}
 />
@@ -70,7 +70,7 @@ ReactDOM.render(
 
 import { GoogleLogout } from 'react-google-login';
 <GoogleLogout
-  clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+  clientId="558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com"
   buttonText="Logout"
   onLogoutSuccess={logout}
 >

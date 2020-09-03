@@ -7,12 +7,12 @@ import './App.css';
 // import axios from 'axios';
 
 import React, { Component } from "react";
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
+import {BrowserRouter as Router, Route } from 'react-router-dom'; 
 import Container from '@material-ui/core/Container';
-// import Switch from '@material-ui/core/Switch'; this makes the toggle button
 
 // import axios from 'axios';
 
+import Start from './pages/Start';
 import Home from './pages/Home';
 import Quiz from './pages/Quiz';
 import Search from './pages/Search';
@@ -21,23 +21,27 @@ import Friends from './pages/Friends';
 import Profile from './pages/Profile';
 import History from './pages/History';
 import Footer from './components/Footer';
-import GoogleBtn from './components/GoogleBtn';
+// import GoogleBtn from './components/GoogleBtn';
 
 
 class App extends Component {
     state= {
         title: 'Grubble',
         headerLinks: [
-          {title: 'Home', path: '/'},
+          {title: 'Start', path: '/'},
+          {title: 'Home', path: '/home'},
           {title: 'Quiz', path: '/quiz'},
           {title: 'Search', path: '/search'},
           {title: 'Results', path: '/results'},
           {title: 'Friends', path: '/friends'}
         ],
-        home: {
+        start: {
           title: 'Grubble', 
           subTitle: 'Take the arguing out of going out',
           text:'Checkout my progress'
+        },
+        home: {
+          title: 'Home', 
         },
         history: {
           title: 'History', 
@@ -60,9 +64,9 @@ class App extends Component {
                 <Router>
                     <h1>Main Display</h1> 
                     <Container className="p-0 container" fluid={true}>     
-                    <GoogleBtn/>  
                         {/* <Switch> */}
-                            <Route exact path="/"  render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
+                            <Route exact path="/" render={()=> <Start title={this.state.start.title} subTitle={this.state.start.subTitle} text={this.state.start.text} />} />
+                            <Route exact path="/home"  render={()=> <Home title={this.state.home.title}/>} />
                             <Route exact path="/friends"  render={()=> <Friends title={this.state.friends.title}/>} />
                             <Route exact path="/profile"  render={()=> <Profile title={this.state.profile.title}/>} />
                             <Route exact path="/history"  render={()=> <History title={this.state.history.title}/>} />

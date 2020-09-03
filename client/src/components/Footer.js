@@ -37,7 +37,7 @@ export default function SimpleBottomNavigation() {
         showLabels
         className={classes.root}
       >
-        <BottomNavigationAction component={Link} to='/' label="Home" icon={<HomeIcon />} />s    
+        <BottomNavigationAction component={Link} to='/home' label="Home" icon={<HomeIcon />} />s    
         <BottomNavigationAction component={Link} to='/friends' label="Friends" icon={<ContactsIcon />} />
         <BottomNavigationAction component={Link} to='/history' label="History" icon={<HistoryIcon />} />
         <BottomNavigationAction component={Link} to='/profile' label="Profile" icon={<AccountBoxIcon />} />

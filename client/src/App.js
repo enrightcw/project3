@@ -17,10 +17,6 @@ import Friends from './pages/Friends';
 import Profile from './pages/Profile';
 import History from './pages/History';
 import Footer from './components/Footer';
-<<<<<<< HEAD
-=======
-// import GoogleBtn from './components/GoogleBtn';
->>>>>>> master
 
 
 class App extends Component {
@@ -66,13 +62,7 @@ class App extends Component {
                 <Router>
                     <h1>Main Display</h1> 
                     <Container className="p-0 container" fluid={true}>     
-<<<<<<< HEAD
                             <Route exact path="/"  render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
-=======
-                        {/* <Switch> */}
-                            <Route exact path="/" render={()=> <Start title={this.state.start.title} subTitle={this.state.start.subTitle} text={this.state.start.text} />} />
-                            <Route exact path="/home"  render={()=> <Home title={this.state.home.title}/>} />
->>>>>>> master
                             <Route exact path="/friends"  render={()=> <Friends title={this.state.friends.title}/>} />
                             <Route exact path="/profile"  render={()=> <Profile title={this.state.profile.title}/>} />
                             <Route exact path="/history"  render={()=> <History title={this.state.history.title}/>} />

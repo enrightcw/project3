@@ -50,7 +50,11 @@ class SignIn extends React.Component {
                         <Button variant="outlined" color="primary" style={{ textTransform: "none" }}>Login</Button>
                     </Grid>
                 </div>
+                <GoogleBtn />
+                
             </Paper>
+
+
         );
     }
 }

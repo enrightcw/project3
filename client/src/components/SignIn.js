@@ -1,77 +1,58 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import GoogleLogin from 'react-google-login';
+import React from "react";
+import { Paper, withStyles, Grid, TextField, Button, FormControlLabel, Checkbox } from '@material-ui/core';
+import { Face, Fingerprint } from '@material-ui/icons'
 
-const responseGoogle = (response) => {
-  console.log(response);
+import GoogleBtn from '../components/GoogleBtn';
+const styles = theme => ({
+    margin: {
+        margin: theme.spacing.unit * 2,
+    },
+    padding: {
+        padding: theme.spacing.unit
+    }
+});
+
+class SignIn extends React.Component {
+    render() {
+        const { classes } = this.props;
+        return (
+            <Paper className={classes.padding}>
+                <div className={classes.margin}>
+                    <Grid container spacing={8} alignItems="flex-end">
+                        <Grid item>
+                            <Face />
+                        </Grid>
+                        <Grid item md={true} sm={true} xs={true}>
+                            <TextField id="username" label="Username" type="email" fullWidth autoFocus required />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={8} alignItems="flex-end">
+                        <Grid item>
+                            <Fingerprint />
+                        </Grid>
+                        <Grid item md={true} sm={true} xs={true}>
+                            <TextField id="username" label="Password" type="password" fullWidth required />
+                        </Grid>
+                    </Grid>
+                    <Grid container alignItems="center" justify="space-between">
+                        <Grid item>
+                            <FormControlLabel control={
+                                <Checkbox
+                                    color="primary"
+                                />
+                            } label="Remember me" />
+                        </Grid>
+                        <Grid item>
+                            <Button disableFocusRipple disableRipple style={{ textTransform: "none" }} variant="text" color="primary">Forgot password ?</Button>
+                        </Grid>
+                    </Grid>
+                    <Grid container justify="center" style={{ marginTop: '10px' }}>
+                        <Button variant="outlined" color="primary" style={{ textTransform: "none" }}>Login</Button>
+                    </Grid>
+                </div>
+            </Paper>
+        );
+    }
 }
- 
-ReactDOM.render(
-  <GoogleLogin
-    clientId="558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com"
-    buttonText="Login"
-    onSuccess={responseGoogle}
-    onFailure={responseGoogle}
-    cookiePolicy={'single_host_origin'}
-  />,
-  document.getElementById('googleButton')
-);
 
-//Stay logged in isSignedIn={true} attribute will call onSuccess callback on load to keep current user signed in
-<GoogleLogin
-  clientId="558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com"
-  onSuccess={responseGoogle}
-  isSignedIn={true}
-/>
-
-//login hook
-// import { useGoogleLogin } from 'react-google-login'
- 
-// const { signIn, loaded } = useGoogleLogin({
-//     onSuccess,
-//     onAutoLoadFinished,
-//     clientId,
-//     cookiePolicy,
-//     loginHint,
-//     hostedDomain,
-//     autoLoad,
-//     isSignedIn,
-//     fetchBasicProfile,
-//     redirectUri,
-//     discoveryDocs,
-//     onFailure,
-//     uxMode,
-//     scope,
-//     accessType,
-//     responseType,
-//     jsSrc,
-//     onRequest,
-//     prompt
-//   })
-
-  //logout hook
-//   import { useGoogleLogout } from 'react-google-login'
- 
-// const { signOut, loaded } = useGoogleLogout({
-//     jsSrc,
-//     onFailure,
-//     clientId,
-//     cookiePolicy,
-//     loginHint,
-//     hostedDomain,
-//     fetchBasicProfile,
-//     discoveryDocs,
-//     uxMode,
-//     redirectUri,
-//     scope,
-//     accessType,
-//     onLogoutSuccess
-//   })
-
-import { GoogleLogout } from 'react-google-login';
-<GoogleLogout
-  clientId="558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com"
-  buttonText="Logout"
-  onLogoutSuccess={logout}
->
-</GoogleLogout>
+export default withStyles(styles)(SignIn); 

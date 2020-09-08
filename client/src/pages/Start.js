@@ -1,11 +1,11 @@
 import React from "react";
-import GoogleBtn from '../components/GoogleBtn';
+import SignIn from "../components/SignIn";
 
 function Home() {
   return (
     <div>
       <h1>Sign In/Up Page</h1>
-      <GoogleBtn />
+      <SignIn/>
     </div>
   );
 }

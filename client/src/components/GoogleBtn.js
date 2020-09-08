@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const CLIENT_ID = '558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com';
+const accessToken = "";
 
 class GoogleBtn extends Component {
    constructor(props) {
@@ -62,7 +63,7 @@ class GoogleBtn extends Component {
           responseType='code,token'
         />
       }
-      { this.state.accessToken ? <h5>Your Access Token: <br/><br/> { this.state.accessToken }</h5> : null }
+      {/* { this.state.accessToken ? <h5>Your Access Token: <br/><br/> { this.state.accessToken }</h5> : null } */}
 
     </div>
     )

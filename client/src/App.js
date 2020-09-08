@@ -16,7 +16,6 @@ import Results from './pages/Results';
 import Friends from './pages/Friends';
 import Profile from './pages/Profile';
 import History from './pages/History';
-import Footer from './components/Footer';
 
 class App extends Component {
     state= {
@@ -70,7 +69,7 @@ class App extends Component {
                             <Route exact path="/results"  render={()=> <Results title={this.state.results.title}/>} />
                             <Route exact path="/quiz"  render={()=> <Quiz title={this.state.quiz.title}/>} />
                     </Container>
-                    <Footer />
+                    {/* <Footer /> */}
                 </Router>
                 
             </div>

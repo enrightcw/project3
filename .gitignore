@@ -105,5 +105,5 @@ dist
 /client/src/pages/.env.development
 
 # package-lock.json
-/package-lock.json
-/client/package-lock.json
+./package-lock.json
+./client/package-lock.json

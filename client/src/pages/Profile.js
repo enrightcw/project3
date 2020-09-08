@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from '../components/Footer';
+
 
 function Home() {
   return (
@@ -7,6 +9,7 @@ function Home() {
       <p>
         The profile page will allow the user to see their preferences and update them at will.
       </p>
+      <Footer />
     </div>
   );
 }

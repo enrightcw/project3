@@ -18,7 +18,6 @@ import Profile from './pages/Profile';
 import History from './pages/History';
 import Footer from './components/Footer';
 
-
 class App extends Component {
     state= {
         title: 'Grubble',

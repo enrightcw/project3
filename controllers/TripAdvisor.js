@@ -16,7 +16,7 @@ export class TripAdvisorController {
   headers = {
     "content-type": "application/octet-stream",
     "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-    "x-rapidapi-key": process.env.RAPIDAPI_KEY,
+    "x-rapidapi-key": process.env.REACT_APP_TRIPADVISOR_API_KEY,
   };
 
   /**

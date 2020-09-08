@@ -31,7 +31,7 @@ class App extends Component {
         start: {
           title: 'Grubble', 
           subTitle: 'Take the arguing out of going out',
-          text:'Checkout my progress'
+          text:''
         },
         home: {
           title: 'Home', 
@@ -47,6 +47,9 @@ class App extends Component {
         },
         quiz: {
           title: 'Establish Your Preferences', 
+        },
+        search: {
+          title: 'Let us make the decision for you.', 
         }
     }
 
@@ -58,7 +61,6 @@ class App extends Component {
         return(
             <div>
                 <Router>
-                    <h1>Main Display</h1> 
                     <Container className="p-0 container" fluid={true}>     
                             <Route exact path="/"  render={()=> <Start title={this.state.start.title} subTitle={this.state.start.subTitle} text={this.state.start.text} />} />
                             <Route exact path="/home"  render={()=> <Home title={this.state.home.title}/>} />

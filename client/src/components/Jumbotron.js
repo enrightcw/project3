@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../assets/images/Grubble-Logo.png";
 
 function Jumbotron({ children }) {
     return (
@@ -10,7 +11,7 @@ function Jumbotron({ children }) {
                 textAlign: "center"}}
             className="jumbotron"
         >
-            {children}
+            <img className = "logo" src={Logo} alt="Logo" />
         </div>
     );
 }

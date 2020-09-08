@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { Link } from 'react-router-dom';
+
 
 const CLIENT_ID = '558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com';
 const accessToken = "";
@@ -52,6 +54,7 @@ class GoogleBtn extends Component {
           clientId={ CLIENT_ID }
           buttonText='Logout'
           onLogoutSuccess={ this.logout }
+          component={Link} to='/search'
           onFailure={ this.handleLogoutFailure }
         >
         </GoogleLogout>: <GoogleLogin

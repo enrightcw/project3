@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const foods = [ "Italian", "Chinese", "Mexican"];
+const foods = [ "Italian", "Chinese", "Mexican", "Japanese" ];
+const activities = [ "Hiking", "Concerts", "Drinking", "Falling Down" ];
 
 export default function CheckboxListSecondary() {
   const classes = useStyles();
@@ -38,7 +39,27 @@ export default function CheckboxListSecondary() {
   return (
     <div>
     <List dense className={classes.root}>
+      <h3>Favorite Foods</h3> 
       {foods.map((value) => {
+        const labelId = `checkbox-list-secondary-label-${value}`;
+        return (
+          <ListItem key={value} button >
+            <ListItemText id={labelId} primary={`${value}`} />
+            <ListItemSecondaryAction>
+              <Checkbox
+                edge="end"
+                onChange={handleToggle(value)}
+                checked={checked.indexOf(value) !== -1}
+                inputProps={{ 'aria-labelledby': labelId }}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+        );
+      })}
+    </List>
+    <List dense className={classes.root}>
+      <h3>Favorite Activities</h3> 
+      {activities.map((value) => {
         const labelId = `checkbox-list-secondary-label-${value}`;
         return (
           

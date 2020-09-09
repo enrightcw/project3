@@ -17,12 +17,32 @@ const headers = {
  *   units: "km",
  *   query: "pattaya"
  */
+
+ 
+
 const searchLocations = (req, res) => {
   axios
     .get(`${url}/locations/search`, {
       params: {
+        query:req.query.location + " " + req.query.typeOfFood + " food",
+      },
+      headers,
+    })
+    .then((response) => {
+      res.status(200).json(response.data.data);
+    })
+    .catch((error) => {
+      console.log(error)
+      res.status(422).send(error);
+    });
+
+};
+
+const searchtypeOfFood = (req, res) => {
+  axios
+    .get(`${url}/locations/search`, {
+      params: {
         query:req.query.location,
-        query:req.query.typeOfFood
       },
       headers,
     })

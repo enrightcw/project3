@@ -20,14 +20,18 @@ const headers = {
 const searchLocations = (req, res) => {
   axios
     .get(`${url}/locations/search`, {
-      params: req.query,
+      params: {
+        query:req.query.location,
+        query:req.query.typeOfFood
+      },
       headers,
     })
     .then((response) => {
-      res.status(200).json(response.data);
+      res.status(200).json(response.data.data);
     })
     .catch((error) => {
-      res.status(error.response.status).end();
+      console.log(error)
+      res.status(422).send(error);
     });
 };
 

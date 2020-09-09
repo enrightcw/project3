@@ -48,6 +48,9 @@ class App extends Component {
         },
         quiz: {
           title: 'Establish Your Preferences', 
+        },
+        search: {
+          title: 'Search for a restaurant', 
         }
     }
 

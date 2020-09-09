@@ -1,3 +1,4 @@
+process.env.NODE_ENV !== "production" && require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const tripAdvisorRoutes = require('./routes/api/tripAdvisor');
@@ -65,7 +66,7 @@ app.post("/submit", ({ body }, res) => {
 });
 
 
-app.use('/tripAdvisor', tripAdvisorRoutes)
+app.use(tripAdvisorRoutes)
 
 // Send every request to the React app
 // Define any API routes before this runs

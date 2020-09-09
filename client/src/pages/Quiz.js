@@ -4,9 +4,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Checkbox from '@material-ui/core/Checkbox';
-import Avatar from '@material-ui/core/Avatar';
+import Footer from '../components/Footer';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +16,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const foods = [ "Italian", "Chinese", "Mexican"];
+const foods = [ "Italian", "Chinese", "Mexican", "Japanese" ];
+const activities = [ "Hiking", "Concerts", "Drinking", "Falling Down" ];
+const dietRestrictions = [ "Gluten-Free", "Vegan", "Nut Allergies", "Shellfish" ];
 
 export default function CheckboxListSecondary() {
   const classes = useStyles();
@@ -36,10 +38,32 @@ export default function CheckboxListSecondary() {
   };
 
   return (
+    <div>
     <List dense className={classes.root}>
+      <h3>Favorite Foods</h3> 
       {foods.map((value) => {
         const labelId = `checkbox-list-secondary-label-${value}`;
         return (
+          <ListItem key={value} button >
+            <ListItemText id={labelId} primary={`${value}`} />
+            <ListItemSecondaryAction>
+              <Checkbox
+                edge="end"
+                onChange={handleToggle(value)}
+                checked={checked.indexOf(value) !== -1}
+                inputProps={{ 'aria-labelledby': labelId }}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+        );
+      })}
+    </List>
+    <List dense className={classes.root}>
+      <h3>Favorite Activities</h3> 
+      {activities.map((value) => {
+        const labelId = `checkbox-list-secondary-label-${value}`;
+        return (
+          
           <ListItem key={value} button>
             
             <ListItemText id={labelId} primary={`${value}`} />
@@ -55,5 +79,28 @@ export default function CheckboxListSecondary() {
         );
       })}
     </List>
+    <List dense className={classes.root}>
+      <h3>Dietary Restrictions</h3> 
+      {dietRestrictions.map((value) => {
+        const labelId = `checkbox-list-secondary-label-${value}`;
+        return (
+          
+          <ListItem key={value} button>
+            
+            <ListItemText id={labelId} primary={`${value}`} />
+            <ListItemSecondaryAction>
+              <Checkbox
+                edge="end"
+                onChange={handleToggle(value)}
+                checked={checked.indexOf(value) !== -1}
+                inputProps={{ 'aria-labelledby': labelId }}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+        );
+      })}
+    </List>
+    <Footer />
+    </div>
   );
 }

@@ -16,7 +16,6 @@ import Results from './pages/Results';
 import Friends from './pages/Friends';
 import Profile from './pages/Profile';
 import History from './pages/History';
-import Footer from './components/Footer';
 
 class App extends Component {
     state= {
@@ -32,7 +31,7 @@ class App extends Component {
         start: {
           title: 'Grubble', 
           subTitle: 'Take the arguing out of going out',
-          text:'Checkout my progress'
+          text:''
         },
         home: {
           title: 'Home', 
@@ -50,7 +49,7 @@ class App extends Component {
           title: 'Establish Your Preferences', 
         },
         search: {
-          title: 'Search for a restaurant', 
+          title: 'Let us make the decision for you.', 
         }
     }
 
@@ -62,7 +61,6 @@ class App extends Component {
         return(
             <div>
                 <Router>
-                    <h1>Main Display</h1> 
                     <Container className="p-0 container" fluid={true}>     
                             <Route exact path="/"  render={()=> <Start title={this.state.start.title} subTitle={this.state.start.subTitle} text={this.state.start.text} />} />
                             <Route exact path="/home"  render={()=> <Home title={this.state.home.title}/>} />
@@ -73,7 +71,7 @@ class App extends Component {
                             <Route exact path="/results"  render={()=> <Results title={this.state.results.title}/>} />
                             <Route exact path="/quiz"  render={()=> <Quiz title={this.state.quiz.title}/>} />
                     </Container>
-                    <Footer />
+                    {/* <Footer /> */}
                 </Router>
                 
             </div>

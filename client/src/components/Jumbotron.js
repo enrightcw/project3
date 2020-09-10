@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/images/Grubble-Logo.png";
+import Logo from "../assets/images/resizedlogo.png";
 
 function Jumbotron({ children }) {
     return (
@@ -8,7 +8,9 @@ function Jumbotron({ children }) {
                 height:200, 
                 clear: "both", 
                 paddingTop: 20, 
-                textAlign: "center"}}
+                justifyContent: "center",
+                display: 'flex'
+            }}
             className="jumbotron"
         >
             <img className = "logo" src={Logo} alt="Logo" />

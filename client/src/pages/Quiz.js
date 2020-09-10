@@ -6,6 +6,9 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 import Footer from '../components/Footer';
+import Jumbotron from "../components/Jumbotron";
+import { Grid } from "@material-ui/core";
+import Container from '@material-ui/core/Container';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +42,18 @@ export default function CheckboxListSecondary() {
 
   return (
     <div>
+      <Jumbotron/>
+      <Grid container spacing = {2}>
+        <Grid item xs={12}>
+          <Container 
+            fluid={true} 
+            maxWidth="sm" 
+            style={{
+              height: '150px',
+              textAlign: 'center',
+              paddingTop: '50px'
+            }}
+            >
     <List dense className={classes.root}>
       <h3>Favorite Foods</h3> 
       {foods.map((value) => {
@@ -100,6 +115,9 @@ export default function CheckboxListSecondary() {
         );
       })}
     </List>
+    </Container>
+        </Grid>
+      </Grid>
     <Footer />
     </div>
   );

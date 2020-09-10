@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-import { Link } from 'react-router-dom';
 
 
 const CLIENT_ID = '558443099548-vptu910jbekmj9m3p80gb6b5lru6s9cs.apps.googleusercontent.com';
-const accessToken = "";
 
 class GoogleBtn extends Component {
    constructor(props) {
@@ -12,7 +10,6 @@ class GoogleBtn extends Component {
     
     this.state = {
       isLogined: false,
-      accessToken: ''
     };
     
     this.login = this.login.bind(this);
@@ -25,7 +22,6 @@ class GoogleBtn extends Component {
     if(response.accessToken){
       this.setState(state => ({
         isLogined: true,
-        accessToken: response.accessToken
       }));
     }
   }
@@ -33,7 +29,6 @@ class GoogleBtn extends Component {
   logout (response) {
     this.setState(state => ({
       isLogined: false,
-      accessToken: ''
     }));
   }
 
@@ -54,7 +49,6 @@ class GoogleBtn extends Component {
           clientId={ CLIENT_ID }
           buttonText='Logout'
           onLogoutSuccess={ this.logout }
-          component={Link} to='/search'
           onFailure={ this.handleLogoutFailure }
         >
         </GoogleLogout>: <GoogleLogin

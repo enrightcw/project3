@@ -1,6 +1,8 @@
 import React from "react";
 import { Paper, withStyles, Grid, TextField, Button, FormControlLabel, Checkbox } from '@material-ui/core';
-import { Face, Fingerprint } from '@material-ui/icons'
+import { Face, Fingerprint } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+
 
 import GoogleBtn from '../components/GoogleBtn';
 const styles = theme => ({
@@ -47,7 +49,8 @@ class SignIn extends React.Component {
                         </Grid>
                     </Grid>
                     <Grid container justify="center" style={{ marginTop: '10px' }}>
-                        <Button variant="outlined" color="primary" style={{ textTransform: "none" }}>Login</Button>
+                        <Button variant="outlined" color="primary" component={Link} 
+                         to='/quiz' style={{ textTransform: "none" }}>Login</Button>
                         <GoogleBtn />
                     </Grid>
                 </div>

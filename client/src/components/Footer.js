@@ -36,11 +36,14 @@ export default function SimpleBottomNavigation() {
         onChange={handleChange}
         showLabels
         className={classes.root}
+        style={{
+          backgroundColor: '#3fa9f5'
+        }}
       >
-        <BottomNavigationAction component={Link} to='/home' label="Home" icon={<HomeIcon />} />s    
-        <BottomNavigationAction component={Link} to='/friends' label="Friends" icon={<ContactsIcon />} />
-        <BottomNavigationAction component={Link} to='/history' label="History" icon={<HistoryIcon />} />
-        <BottomNavigationAction component={Link} to='/profile' label="Profile" icon={<AccountBoxIcon />} />
+        <BottomNavigationAction component={Link} to='/home'  label="Home" style={{color: 'white'}} icon={<HomeIcon style={{color: 'white'}}/>} />    
+        <BottomNavigationAction component={Link} to='/friends' label="Friends" style={{color: 'white'}}  icon={<ContactsIcon style={{color: 'white'}}/>} />
+        <BottomNavigationAction component={Link} to='/history' label="History" style={{color: 'white'}} icon={<HistoryIcon style={{color: 'white'}}/>} />
+        <BottomNavigationAction component={Link} to='/profile' label="Profile" style={{color: 'white'}} icon={<AccountBoxIcon style={{color: 'white'}}/>} />
       </BottomNavigation>
    
     </footer>

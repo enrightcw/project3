@@ -48,9 +48,10 @@ class SignIn extends React.Component {
                     </Grid>
                     <Grid container justify="center" style={{ marginTop: '10px' }}>
                         <Button variant="outlined" color="primary" style={{ textTransform: "none" }}>Login</Button>
+                        <GoogleBtn />
                     </Grid>
                 </div>
-                <GoogleBtn />
+                
                 
             </Paper>
 

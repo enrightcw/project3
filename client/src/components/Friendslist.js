@@ -58,7 +58,7 @@ class FriendList extends Component {
       <div className="main">
         <div className="mainDiv">
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <h3>Enter a Friend!</h3>
+            <h3 style={{color: '#f7931e'}}>Enter a Friend!</h3>
             <fieldset className="form-group">
               <label>Friend's Name:</label>
               <input
@@ -70,8 +70,15 @@ class FriendList extends Component {
             </fieldset>
 
             
-            <button className="btn btn-success" type="submit">
-              Save Friend
+            <button 
+              className="btn btn-success"
+              type="submit" 
+              style={{
+                backgroundColor: '#3fa9f5', 
+                color: '#ffffff',
+                marginTop: '20px',
+                }}>
+            Save Friend
             </button>
           </form>
           {this.state.friends.map(friend => <Friend friend={friend} key={friend.id} removeFriend={this.deleteFriend}/>)}

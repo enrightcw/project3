@@ -28,10 +28,19 @@ export default class Searchfunction extends Component{
     render()    {
         return (
             <div>
-                <form onSubmit={ this.search }>
-                    <input type="text" name="location" value={ this.state.location } onChange={ this.inputHandler }/>
-                    <input type="text" name="typeOfFood" value={ this.state.typeOfFood } onChange={ this.inputHandler }/>  
-                    <button type="submit">search</button>
+                <form onSubmit={ this.search }
+                style={{
+                    textAlign: 'center',
+                    paddingTop: '20px'
+                }}
+                >
+                    <input type="text" name="location" placeholder="Location" value={ this.state.location } onChange={ this.inputHandler }/>
+                    <input type="text" name="typeOfFood" placeholder="Type of Food"value={ this.state.typeOfFood } onChange={ this.inputHandler }/>  
+                    <br/>
+                    <button type="submit" style={{backgroundColor:'#3fa9f5', color: 'white', marginTop: '20px'}} >
+                        <Search/>
+                        Search
+                    </button>
                 </form>
                 { this.state.results.map(location => <h1>{location.result_object.name}</h1>)}                
             </div>    

@@ -15,7 +15,11 @@ function Home() {
         <Container fluid={true} maxWidth="sm">
                 
                     <h2>Welcome to Grubble, allow us to take the "I don't know" out of your night out!</h2> 
-                    <SignIn/>
+                    <SignIn
+                    style={{
+                      textAlign: 'center'
+                    }}
+                    />
           </Container>
             </Grid>
             </Grid>

@@ -29,7 +29,7 @@ const searchLocations = (req, res) => {
       headers,
     })
     .then((response) => {
-      res.status(200).json(response.data.data);
+      res.status(200).json(response.data.data.filter(item => item.result_type === "restaurants"));
     })
     .catch((error) => {
       console.log(error)
@@ -47,7 +47,10 @@ const searchtypeOfFood = (req, res) => {
       headers,
     })
     .then((response) => {
-      res.status(200).json(response.data.data);
+      console.log(response.data.data[0])
+      const restaurants = response.data.data.filter(item => item.result_type === "restaurants")
+      console.log(restaurants[0])
+      res.status(200).json(restaurants);
     })
     .catch((error) => {
       console.log(error)

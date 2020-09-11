@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import { Search } from "@material-ui/icons";
+import Card from '@material-ui/core/Card';
 
 export default class Searchfunction extends Component{
     state = {
@@ -42,7 +43,7 @@ export default class Searchfunction extends Component{
                         Search
                     </button>
                 </form>
-                { this.state.results.map(location => <h1>{location.result_object.name}</h1>)}                
+                { this.state.results.map(location => <Card style={{marginTop: '20px', height: '50px', width: '350px', justifyContent: 'center', display: 'flex', backgroundColor: '#f7931e', color:'white'}}>{location.result_object.name}</Card>)}                
             </div>    
         )
     }

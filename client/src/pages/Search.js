@@ -16,7 +16,7 @@ function Search() {
           maxWidth="sm" 
           style={{
             backgroundColor: 'white',
-            height: '150px',
+            height: '100px',
             }}>
           <SearchFunction/>
           </Container>

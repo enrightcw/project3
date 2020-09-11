@@ -55,11 +55,14 @@ class FriendList extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main" >
         <div className="mainDiv">
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <h3 style={{color: '#f7931e'}}>Find Your Friends!</h3>
-            <fieldset className="form-group">
+          <h3 style={{color: '#f7931e', textShadow: '1px 1px black', fontSize: '20px', padding: '0' }}>Find Your Friends!</h3>
+            <fieldset className="form-group" style={{
+            backgroundColor: 'white',
+            }}>
+              
               <label>Name:</label>
               <input
                 type="text"

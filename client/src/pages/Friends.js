@@ -67,7 +67,8 @@ function Friends() {
         );
       })}
     </List>
-            <Friendslist />
+    <br/>
+            <Friendslist/>
 
           </Container>
         </Grid>

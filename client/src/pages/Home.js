@@ -22,7 +22,7 @@ function Home() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div >
       <Jumbotron/>
       <Grid container spacing = {2}>
         <Grid item xs={12}>

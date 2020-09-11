@@ -29,36 +29,40 @@
 <h1 align=center> GIF HERE </h1>
 <br>
 
-## Team Members:
+# Team Members:
 + Tyler Roth 
 + Michael Spikes
 + Chris Enright
 
-## Project Roles:
+# Project Roles:
 + Product Owner: Chris
 + Designer: Tyler
 + API Lead: Michael
 
-## Elevator Pitch
-Grubble is here to take the frustration or the “I don’t know” out of going out.  This app makes the decision for you based on the preferences and information stored per user.  Whether it’s dining out, or finding a fun activity, Grubble, seamlessly allows you to find something that everyone will enjoy.
+# Elevator Pitch
+<p align=center>Grubble is here to take the frustration or the “I don’t know” out of going out.  This app makes the decision for you based on the preferences and information stored per user.  Whether it’s dining out, or finding a fun activity, Grubble, seamlessly allows you to find something that everyone will enjoy.</p>
 
-## Usage
+# Usage
 
-This is a proof of concept and not for public consumption yet.
+<p align=center>On first sign up, the user will be brought to a preferences quiz which will allow them to select their favorite foods, activities, and even dietary restrictions.  These preferences will become the basis for their profile and will allow Grubble to tailor the evening to their taste.  Our goal is to allow our users to create a group if they want or just fly solo, and allow the app to decide where they should eat.  At that point they can give the result a "thumb's up" or "roll again".</p>
 
-## Concept to Reality
+# Concept to Reality
+<img src="./client/src/assets/images/Grubble.png" alt="Grubble" width="200"></img>
 
-## Credits
+# Credits
 
 This software uses the following open source packages:
-
-### Email 
-enrightcw@gmail.com
++ GitHub
++ VS Code
++ React
++ Material-UI
++ MongoDB Atlas
++ Heroku
 
 ## Contributors
-Tyler: https://github.com/tylerroth15
-Michael: https://github.com/michaelspikes85
-Chris: https://github.com/enrightcw
++ Tyler: https://github.com/tylerroth15  |  tylerroth1535@gmail.com
++ Michael: https://github.com/michaelspikes85  |  michael.spikes.85@gmail.com
++ Chris: https://github.com/enrightcw  |  enrightcw@gmail.com
 
 ## License
 

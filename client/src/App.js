@@ -50,6 +50,9 @@ class App extends Component {
         },
         search: {
           title: 'Let us make the decision for you.', 
+        },
+        results: {
+          title: 'Here is where to go!', 
         }
     }
 

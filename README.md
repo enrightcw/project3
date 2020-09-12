@@ -7,8 +7,6 @@
 
 <h4 align="center">Final Project for GT Full Stack Boot Camp.</h4>
 
-<!-- ![GIF demo](img/demo.gif) -->
-
 <p align="center">
   <a href= "https://github.com/enrightcw/project3/projects/1"><img src= "https://img.shields.io/github/issues/enrightcw/project3"></a>
   <a href="https://github.com/enrightcw/project3/stargazers"><img src="https://img.shields.io/github/stars/enrightcw/project3.svg?style=plasticr"/></a>
@@ -26,7 +24,7 @@
   <a href="#license">License</a>
 </p>
 
-<h1 align=center> GIF HERE </h1>
+<h1 align=center> <img src="https://media4.giphy.com/media/PjTJVizwWdGL8eHPY1/giphy.gif" alt="Grubble" width="250"></img> </h1>
 <br>
 
 # Team Members:
@@ -48,6 +46,7 @@
 
 # Concept to Reality
 <img src="./client/src/assets/images/Grubble.png" alt="Grubble" width="200"></img>
+<img src="./client/src/assets/images/HomeScreen.png" alt="Grubble" width="200"></img>
 
 # Credits
 

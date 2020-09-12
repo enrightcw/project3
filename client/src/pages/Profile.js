@@ -4,7 +4,9 @@ import Jumbotron from "../components/Jumbotron";
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
+
 function Home() {
+
   return (
     <div>
         <Jumbotron />
@@ -18,13 +20,11 @@ function Home() {
             height: '350px',
             }}>
           
-          <p>
-            The profile page will allow the user to see their preferences and update them at will.
-          </p>
+          <h3>Profile Page Under Development</h3>
 
           </Container>
         </Grid>
-      </Grid>
+        </Grid>
         
         <Footer />
     </div>
